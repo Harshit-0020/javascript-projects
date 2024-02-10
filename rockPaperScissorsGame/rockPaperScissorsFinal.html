@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    Rock Paper Scissors
+  </title>
+</head>
+
+<link rel="stylesheet" href="styles/rockPaperScissors.css">
+
+<body>
+  <p class="title">Welcome to the game of Rock Paper Scissors:</p>
+  <button class="move-button" onclick="
+      const yourMove='rock';
+      const compMove = decideComputerChoice();
+
+      decideOutcome(yourMove,compMove);
+      showMovesOnPage(compMove,yourMove);
+      scoreOnPage();
+    "><img class="move-icon" src="images/rock-emoji.png"></button>
+  <button class="move-button" onclick="
+    const yourMove = 'paper';
+    const compMove = 
+    decideComputerChoice();
+
+    decideOutcome(yourMove,compMove);
+    showMovesOnPage(compMove,yourMove);
+    scoreOnPage();
+    ">
+    <img class="move-icon" src="images/paper-emoji.png"></button>
+  <button class="move-button" onclick="
+  const yourMove = 'scissors';
+  const compMove = 
+  decideComputerChoice();
+
+  decideOutcome(yourMove,compMove);
+  showMovesOnPage(compMove,yourMove);
+  scoreOnPage();
+  "><img class="move-icon" src="images/scissors-emoji.png"></button>
+
+  <p class="js-moveset score">
+  </p>
+
+  <p class="js-result score"></p>
+
+  <p class="js-score score"></p>
+  <button class='reset-button' onclick="
+   reset_score();
+   localStorage.removeItem('score');
+   scoreOnPage();
+  ">
+    Reset Score</button>
+
+  <script src="rockPaperScissors.js"></script>
+</body>
+
+</html>
