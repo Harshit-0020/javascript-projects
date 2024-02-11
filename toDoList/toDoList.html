@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>To Do List</title>
+  <link rel="stylesheet" href="styles/toDoList.css">
+</head>
+
+<body>
+  <h1>
+    <center>Create Todo List</center>
+  </h1>
+  <div class="center">
+    <div class="todo-input-grid">
+      <input class='js-task-name name-input' placeholder="Task name">
+      <input class='js-task-date date-input' type="date">
+      <button class="add-task js-add-task-button" onclick="
+    addTask();
+    renderTodoList();
+    ">Add</button>
+    </div>
+
+    <div class="todo-grid js-task-board"></div>
+  </div>
+  <!-- Div represents container for other elementsJavascriptProjects/toDoList/scripts/toDoList.js / allows nesting of elements-->
+
+  <script src="scripts/toDoList.js"></script>
+</body>
+
+</html>
